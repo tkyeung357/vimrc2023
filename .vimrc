@@ -89,7 +89,7 @@ vnoremap <F1> :set invfullscreen<CR>
 map <leader>q gqip
 
 " Visualize tabs and newlines
-set listchars=tab:?\ ,eol:¬
+set listchars=tab:?\ ,eol:Â¬
 " Uncomment this to enable by default:
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
@@ -103,7 +103,13 @@ let g:solarized_termtrans=1
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
 " colorscheme solarized 
- 
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 "------------------------------------------------------------
 "
 " Specify a directory for plugins
@@ -253,6 +259,10 @@ nnoremap <Leader>wv <C-w>v<C-w>l
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>ww <C-w><C-w>
 
+" Vim 7.3.1058
+" Exuberant Ctags 5.5 or Universal Ctags (recommended), a maintained fork of Exuberant Ctags.
+nmap <F8> :TagbarToggle<CR>
+
 "search for visually selected text. http://vim.wikia.com/wiki/Search_for_visually_selected_text
 vnoremap // y/<C-R>"<CR>
 
@@ -288,7 +298,7 @@ if has("gui_running")
 
     " Show tabs and newline characters with ,s
     nmap <Leader>s :set list!<CR>
-	set listchars=tab:¿\ ,trail:·,extends:¿,precedes:¿,nbsp:×,eol:¬
+	set listchars=tab:Â¿\ ,trail:Â·,extends:Â¿,precedes:Â¿,nbsp:Ã—,eol:Â¬
     "Invisible character colors
     highlight NonText guifg=#4a4a59
     highlight SpecialKey guifg=#4a4a59
