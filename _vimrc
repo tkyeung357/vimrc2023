@@ -147,6 +147,9 @@ Plug 'bling/vim-airline'
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
 
+"tagbar
+Plug 'majutsushi/tagbar'
+
 "Themes gotham
 Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
