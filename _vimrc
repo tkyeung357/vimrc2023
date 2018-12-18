@@ -150,6 +150,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Themes gotham
 Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 " Initialize plugin system
 call plug#end()
@@ -294,7 +295,8 @@ if has("gui_running")
 	"colorscheme github
 	"colorscheme Mustang             "This theme works great in 256 colors
 	"set background=light
-    colorscheme gotham
+    "colorscheme gotham
+    colorscheme gruvbox
 
     " Show tabs and newline characters with ,s
     nmap <Leader>s :set list!<CR>
@@ -311,12 +313,13 @@ if has("gui_running")
 else
     "colorscheme Mustang             "This theme works great in 256 colors
     "colorscheme desert             "This theme works great in 256 colors
-    colorscheme gotham
+    "colorscheme gotham
+    colorscheme gruvbox
 	set mouse=a						"This allows mouse scrolling in terminal, and selection of text
     " Color scheme (terminal)
     set t_Co=256
     set background=dark
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
+    "let g:solarized_termcolors=256
+    "let g:solarized_termtrans=1
 endif
 
