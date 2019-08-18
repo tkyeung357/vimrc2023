@@ -83,6 +83,11 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+" copy & paste
+inoremap <C-v> <ESC>"+pa
+vnoremap <C-c> "+y
+vnoremap <C-d> "+d
+
 " Textmate holdouts
 
 " Formatting
@@ -154,6 +159,9 @@ Plug 'majutsushi/tagbar'
 Plug 'whatyouhide/vim-gotham'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
+
+"xdebug
+Plug 'vim-vdebug/vdebug'
 
 " Initialize plugin system
 call plug#end()
