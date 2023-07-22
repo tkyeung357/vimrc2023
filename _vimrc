@@ -84,9 +84,9 @@ nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
 " copy & paste
-inoremap <C-v> <ESC>"+pa
-vnoremap <C-c> "+y
-vnoremap <C-d> "+d
+" inoremap <C-v> <ESC>"+pa
+" vnoremap <C-c> "+y
+" vnoremap <C-d> "+d
 
 " Textmate holdouts
 
@@ -161,7 +161,7 @@ Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 
 "xdebug
-Plug 'vim-vdebug/vdebug'
+" Plug 'vim-vdebug/vdebug'
 
 " Initialize plugin system
 call plug#end()
