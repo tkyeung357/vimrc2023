@@ -238,7 +238,8 @@ autocmd FileType nerdtree noremap <buffer> <c-left> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-h> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-right> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-l> <nop>
-autocmd vimenter * if !argc() | NERDTree | endif " Open NERDTree if we're simply launching vim
+autocmd vimenter * NERDTree " Open NERDTree if we're simply launching vim
+autocmd vimenter * wincmd p "move cursor into the main window
 
 "------  Buffers  ------
 " Ctrl Left & Right move between buffers
