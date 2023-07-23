@@ -232,13 +232,14 @@ let g:ackprg="ack -H --nocolor --nogroup --column --type-add php=.tpl"
 "------  NERDTree Options  ------
 let NERDTreeIgnore=['CVS','\.dSYM$']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
-noremap <silent> <Leader>n :NERDTreeToggle<CR>
+"throw a % sign on the end to sync nerdtree to current opened buff
+noremap <silent> <Leader>n :NERDTreeToggle %<CR>
 " These prevent accidentally loading files while in the NERDTree panel
 autocmd FileType nerdtree noremap <buffer> <c-left> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-h> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-right> <nop>
 autocmd FileType nerdtree noremap <buffer> <c-l> <nop>
-autocmd vimenter * NERDTree " Open NERDTree if we're simply launching vim
+autocmd vimenter * NERDTree % " Open NERDTree if we're simply launching vim
 autocmd vimenter * wincmd p "move cursor into the main window
 
 "------  Buffers  ------
